@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+import React from 'react';
+import Heading from './Component/Heading';
+import Netflix from './Component/Netflix';
+import Amazon from './Component/Amazon';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+let favOtt = prompt("Your favourite ott platform: Netflix or Amazon").toUpperCase();
+
+const App = () => {
+  return (<>
+    <Heading ott={favOtt} />
+    <div id="seriesContainer">
+      {(favOtt === "NETFLIX") ? <Netflix /> : <Amazon />}
     </div>
-  );
+  </>)
 }
 
 export default App;
