@@ -1,0 +1,12 @@
+header {
+  padding: 1rem 0;
+}
+
+header h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  color: gray;
+}
